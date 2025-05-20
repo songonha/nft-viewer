@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng Xem NFT trên BASE Mainnet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Xem NFT trên BASE Mainnet</h1>
+        <p class="description">
+            Ứng dụng này cho phép bạn xem tất cả các NFT từ bộ sưu tập 
+            <span class="highlight">0x0e381cd73faa421066dc5e2829a973405352168c</span> 
+            mà một địa chỉ ví sở hữu trên mạng BASE Mainnet.
+        </p>
+
+        <div class="input-container">
+            <input type="text" id="wallet-address" placeholder="Nhập địa chỉ ví của bạn (0x...)" />
+            <button id="fetch-button">Xem NFT</button>
+        </div>
+
+        <div class="loading" id="loading-indicator">
+            <div class="spinner"></div>
+            <p>Đang tải dữ liệu...</p>
+        </div>
+
+        <div id="error-message" class="error-message"></div>
+
+        <div id="nft-container" class="nft-grid">
+            <!-- NFT sẽ được hiển thị ở đây -->
+        </div>
+
+        <div id="no-nft-message" class="no-nft-message">
+            <p>Không tìm thấy NFT nào từ bộ sưu tập này cho địa chỉ ví đã nhập.</p>
+        </div>
+
+        <div class="instructions">
+            <h2>Hướng dẫn sử dụng</h2>
+            <ol>
+                <li>Nhập địa chỉ ví Ethereum của bạn vào ô trên (bắt đầu bằng 0x).</li>
+                <li>Nhấn nút "Xem NFT" để tìm kiếm các NFT từ bộ sưu tập đã chỉ định.</li>
+                <li>Đợi trong giây lát để hệ thống truy vấn dữ liệu từ blockchain.</li>
+                <li>Xem danh sách NFT hiển thị bên dưới với hình ảnh và thông tin chi tiết.</li>
+            </ol>
+        </div>
+    </div>
+    
+    <!-- Mã JavaScript chính của ứng dụng -->
+    <script src="app.js"></script>
+</body>
+</html>
